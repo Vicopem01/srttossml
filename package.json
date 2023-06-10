@@ -1,0 +1,27 @@
+{
+  "name": "srttossml",
+  "version": "1.0.0",
+  "description": "Convert srt files to ssml that can be parsed by AWS Polly",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vicopem01/srttossml.git"
+  },
+  "keywords": [
+    "text-to-speech",
+    "srt",
+    "ssml",
+    "awspolly",
+    "polly"
+  ],
+  "author": "Victor Ogunjobi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vicopem01/srttossml/issues"
+  },
+  "homepage": "https://github.com/Vicopem01/srttossml#readme"
+}
