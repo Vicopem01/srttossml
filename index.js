@@ -1,16 +1,16 @@
 import fs from "fs";
 
 /**
- * @prop srtFilePath - The file path to the srt file that contains the text
- * @prop ssmlFilePath: The file path for generated SSMl file to be saved to
+ * @prop srtInputPath - The file path to the srt file that contains the text
+ * @prop ssmlOutputPath: The file path for generated SSMl file to be saved to
  *
  * @author Victor Ogunjobi
  */
 
-const convertSrtToSsml = (srtFilePath, ssmlFilePath) => {
+const convertSrtToSsml = (srtInputPath, ssmlOutputPath) => {
   try {
     // read content of srt file in standard utf-8 format
-    const srtContent = fs.readFileSync(srtFilePath, "utf-8");
+    const srtContent = fs.readFileSync(srtInputPath, "utf-8");
 
     // split the SRT content into individual subtitle entries
     const subtitleEntries = srtContent.split(`\n\n`);
@@ -35,9 +35,9 @@ const convertSrtToSsml = (srtFilePath, ssmlFilePath) => {
       .join("\n");
 
     // write the SSML content to a file
-    fs.writeFileSync(ssmlFilePath, `<speak>${ssmlContent}</speak>`, "utf-8");
+    fs.writeFileSync(ssmlOutputPath, `<speak>${ssmlContent}</speak>`, "utf-8");
 
-    return "File generated at " + ssmlFilePath;
+    return "File generated at " + ssmlOutputPath;
   } catch (error) {
     console.error("An error occurred while converting the SRT file:", error);
   }
