@@ -1,6 +1,6 @@
 {
   "name": "srttossml",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert srt files to ssml that can be parsed by AWS Polly",
   "main": "index.js",
   "type": "module",
