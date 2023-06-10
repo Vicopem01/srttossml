@@ -15,7 +15,7 @@ Using AWS Polly requires SSML files for a better optimised text to speech experi
 
 This library receives srt file input and converts to AWS Polly compatible ssml :
 
-```
+```js
 import srttossml from "srttosmsl"
 
 // takes in two parameters
